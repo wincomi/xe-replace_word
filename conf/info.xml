@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+	<title xml:lang="ko">특정 단어 치환</title>
+	<description xml:lang="ko">
+		글과 댓글에 포함된 특정 단어를 치환합니다.
+	</description>
+	<version>1.0</version>
+	<date>2017-07-14</date>
+	<author email_address="admin@wincomi.com" link="https://www.wincomi.com">
+		<name xml:lang="ko">윈컴이</name>
+	</author>
+
+	<extra_vars>
+		<group>
+			<title xml:lang="ko">맞춤법 오류 치환</title>
+			<var name="type1" type="select">
+				<title xml:lang="ko">됬 → 됐</title>
+				<description xml:lang="ko">'되 + 었'의 축약형인 '됐'으로 치환합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용</title>
+				</options>
+			</var>
+			<var name="type2" type="select">
+				<title xml:lang="ko">되요 → 돼요</title>
+				<description xml:lang="ko">'되- + -어 + -요'의 축약형인 '돼요'로 치환합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용</title>
+				</options>
+			</var>
+		</group>
+		
+		<group>
+		</group>
+	</extra_vars>
+</addon>
