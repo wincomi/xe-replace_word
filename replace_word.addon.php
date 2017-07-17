@@ -13,13 +13,20 @@ if($called_position == 'before_module_init' && ($this->act === 'procBoardInsertD
 {
 	$content = Context::get('content');
 
-	if($addon_info->type1 == 'Y') {
+	if($addon_info->type1 == 'Y')
+	{
 		$content = preg_replace("/됬/", "됐", $content);
 	}
 	
-	if($addon_info->type2 == 'Y') {
+	if($addon_info->type2 == 'Y')
+	{
 		$content = preg_replace("/되요/", "돼요", $content);
 	}
+	
+	if($addon_info->type3 == 'Y')
+	{
+		$content = preg_replace("/되서/", "돼서", $content);
+	}	
 
 	Context::set('content', $content);
 }

@@ -33,6 +33,16 @@
 					<title xml:lang="ko">사용</title>
 				</options>
 			</var>
+			<var name="type3" type="select">
+				<title xml:lang="ko">되서 → 돼서</title>
+				<description xml:lang="ko">'되- + -어 + -서'의 축약형인 '돼서'로 치환합니다.</description>
+				<options value="N">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+				<options value="Y">
+					<title xml:lang="ko">사용</title>
+				</options>
+			</var>
 		</group>
 	</extra_vars>
 </addon>
