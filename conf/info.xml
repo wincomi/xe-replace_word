@@ -4,8 +4,8 @@
 	<description xml:lang="ko">
 		글과 댓글에 포함된 특정 단어를 치환합니다.
 	</description>
-	<version>1.0</version>
-	<date>2017-07-14</date>
+	<version>1.1</version>
+	<date>2017-07-17</date>
 	<author email_address="admin@wincomi.com" link="https://www.wincomi.com">
 		<name xml:lang="ko">윈컴이</name>
 	</author>
@@ -33,9 +33,6 @@
 					<title xml:lang="ko">사용</title>
 				</options>
 			</var>
-		</group>
-		
-		<group>
 		</group>
 	</extra_vars>
 </addon>
