@@ -11,26 +11,31 @@ if(!defined("__XE__")) {
 
 if($called_position == 'before_module_init' && ($this->act === 'procBoardInsertDocument' || $this->act === 'procBoardInsertComment'))
 {
+	$replace_words = array();
+	
 	$title = Context::get('title');
 	$content = Context::get('content');
 
 	if($addon_info->type1 == 'Y')
 	{
-		$title = preg_replace("/됬/", "됐", $title);
-		$content = preg_replace("/됬/", "됐", $content);
+		$replace_words[] = array("됬", "됐");
 	}
 	
 	if($addon_info->type2 == 'Y')
 	{
-		$title = preg_replace("/되요/", "돼요", $title);
-		$content = preg_replace("/되요/", "돼요", $content);
+		$replace_words[] = array("되요", "돼요");
 	}
 	
 	if($addon_info->type3 == 'Y')
 	{
-		$title = preg_replace("/되서/", "돼서", $title);
-		$content = preg_replace("/되서/", "돼서", $content);
+		$replace_words[] = array("되서", "돼서");
 	}	
+
+	for($i = 0; $i < count($replace_words); $i++) 
+	{
+		$title = preg_replace("/".$replace_words[$i][0]."/", $replace_words[$i][1], $title);
+		$content = preg_replace("/".$replace_words[$i][0]."/", $replace_words[$i][1], $content);		
+	}
 
 	Context::set('title', $title);
 	Context::set('content', $content);
